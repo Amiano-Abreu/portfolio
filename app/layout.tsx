@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import GrainEffect from "@/components/visualEffects/grain-effect";
+import { Cursor } from "@/components/cursor/cursor";
 
 // Fonts
 const MainFont = Bricolage_Grotesque({ subsets: ["latin"] });
@@ -14,6 +15,7 @@ const PixelFont = localFont({
   variable: "--font-pixel"
 });
 
+// METADATA
 export const metadata: Metadata = {
   title: "Amiano Abreu",
   description: "Amiano Abreu official portfolio",
@@ -34,6 +36,9 @@ export default function RootLayout({
         )}
       >
         <GrainEffect />
+        <Cursor 
+          color="#fff"
+        />
         {children}
       </body>
     </html>
