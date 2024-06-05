@@ -2,6 +2,8 @@
 
 import Button from "@/components/ui/button";
 import Card from "@/components/ui/card";
+import Input from "@/components/ui/input";
+import TextArea from "@/components/ui/text-area";
 import WaterWaveWrapper from "@/components/visualEffects/water-wave-wrapper";
 
 import { GoHomeFill } from "react-icons/go";
@@ -31,6 +33,15 @@ export default function Home() {
                   Google
                 </Button>
               </div>
+              <Input 
+                type="text"
+                placeholder="Name full"
+                icon={<GoHomeFill />}
+              />
+              <TextArea 
+                placeholder="Coments"
+                icon={<GoHomeFill />}
+              />
             </Card>
           </div>
         </div>
