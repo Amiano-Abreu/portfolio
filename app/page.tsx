@@ -14,6 +14,7 @@ import LiveClock from "@/components/ui/live-clock";
 import MagneticWrapper from "@/components/visualEffects/magnetic-wrapper";
 import ScrollDown from "@/components/ui/scroll-down";
 import LandingSection from "@/sections/landing";
+import Featured from "@/sections/featured";
 
 export default function Home() {
   return (
@@ -25,7 +26,8 @@ export default function Home() {
     >
       {() => (
         <div>
-          <LandingSection />
+          {/* <LandingSection /> */}
+          <Featured />
         </div>
       )}
     </WaterWaveWrapper>
