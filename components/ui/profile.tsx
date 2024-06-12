@@ -1,7 +1,7 @@
 import Image from "next/image";
 import MyImage from "@/public/assets/images/me/me.jpg"
 
-export default function profile() {
+export default function Profile() {
   return (
     <div
         className="flex items-center gap-x-2 transition-colors duration-75 text-primary-foreground"

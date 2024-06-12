@@ -13,6 +13,7 @@ import { FaArrowRight } from "react-icons/fa";
 import LiveClock from "@/components/ui/live-clock";
 import MagneticWrapper from "@/components/visualEffects/magnetic-wrapper";
 import ScrollDown from "@/components/ui/scroll-down";
+import LandingSection from "@/sections/landing";
 
 export default function Home() {
   return (
@@ -23,45 +24,8 @@ export default function Home() {
       resolution="2048"
     >
       {() => (
-        <div className="w-full p-10">
-          <div className="max-w-2xl mx-auto">
-            <Card title="Ui Components">
-              <div className="grid grid-cols-4">
-                <Button>Basic Button</Button>
-                <Button>
-                  <GoHomeFill />
-                  icon
-                </Button>
-                <Button isIcon>
-                  <GoHomeFill />
-                </Button>
-                <Button link="https://www.google.com">
-                  Google
-                </Button>
-              </div>
-              <Input 
-                type="text"
-                placeholder="Name full"
-                icon={<GoHomeFill />}
-              />
-              <TextArea 
-                placeholder="Coments"
-                icon={<GoHomeFill />}
-              />
-              <Profile />
-              <MagneticWrapper className="w-[300px]">
-                <CustomButton 
-                  text="Contact us"
-                  icon={<FaArrowRight />}
-                />
-              </MagneticWrapper>
-              <MagneticWrapper>
-                <ScrollDown />
-              </MagneticWrapper>
-
-              <LiveClock timeZone="America/Los_Angeles" />
-            </Card>
-          </div>
+        <div>
+          <LandingSection />
         </div>
       )}
     </WaterWaveWrapper>
