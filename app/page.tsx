@@ -15,6 +15,7 @@ import MagneticWrapper from "@/components/visualEffects/magnetic-wrapper";
 import ScrollDown from "@/components/ui/scroll-down";
 import LandingSection from "@/sections/landing";
 import Featured from "@/sections/featured";
+import AboutSection from "@/sections/about";
 
 export default function Home() {
   return (
@@ -27,7 +28,7 @@ export default function Home() {
       {() => (
         <div className="pb-8">
           {/* <LandingSection /> */}
-          <Featured />
+          <AboutSection />
         </div>
       )}
     </WaterWaveWrapper>
