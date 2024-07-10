@@ -1,4 +1,5 @@
 import MeCard from "@/components/cards/me";
+import ResumeCard from "@/components/cards/resume";
 import Heading from "@/components/heading/heading";
 import Card from "@/components/ui/card";
 
@@ -13,11 +14,7 @@ export default function AboutSection() {
             <div className="space-y-4 py-8">
                 <div className="space-y-4 grid md:grid-cols-2 md:gap-4 md:space-y-0 2xl:grid-cols-3">
                     <MeCard />
-                    <Card
-                        title="Resume"
-                    >
-                        Resume
-                    </Card>
+                    <ResumeCard />
                     <Card
                         title="Background"
                     >
