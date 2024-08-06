@@ -27,7 +27,7 @@ export default EducationCard
 const educationData = [
   {
     date: "2017 - 2021",
-    title: "Bachelors in Computer Engineering",
+    title: "B.E Computer Engineering",
     subTitle: "Goa Engineering College",
   },
   {

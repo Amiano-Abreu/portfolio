@@ -10,11 +10,11 @@ export default function StackCard() {
                 stackData.map((tech, i) => {
                     return (
                         <div 
-                            className="grid items-center gap-[90px]"
+                            className={`grid items-center gap-[90px] max-sm:grid-cols-1 max-sm:gap-[20px] md:grid-cols-custom-md `}
                             key={i}
-                            style={{
-                                gridTemplateColumns: "50px 1fr"
-                            }}    
+                            // style={{
+                            //     gridTemplateColumns: "50px 1fr"
+                            // }}    
                         >
                             <div className="h-auto flex-none break-words whitespace-pre">
                                 <p className="text-secondary-foreground">

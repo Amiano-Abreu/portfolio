@@ -13,6 +13,9 @@ const config: Config = {
         oswald: ["var(--font-oswald)"],
         pixel: ["var(--font-pixel)"]
       },
+      gridTemplateColumns: {
+        'custom-md': '50px 1fr',
+      },
       screens: { xs: "520px", "2xl": "1400px" },
       colors: {
         primary: {

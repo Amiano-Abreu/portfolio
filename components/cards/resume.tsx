@@ -19,7 +19,7 @@ function ResumeCard() {
             <Image 
                 src={signature}
                 alt="Amiano Abreu"
-                className="mb-10"
+                className="mb-10 mx-auto"
             />
         </div>
 

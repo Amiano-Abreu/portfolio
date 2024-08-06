@@ -26,7 +26,7 @@ export const TimelineItem: FC<TimelineItemProps> = ({
     tag
 }) => {
     return (
-        <div className="flex flex-wrap gap-12 min-h justify-start relative">
+        <div className="flex flex-wrap gap-12 min-h justify-start relative max-sm:flex-col max-sm:gap-1 ">
             <div className="h-auto flex-none break-words whitespace-pre">
                 <p className="text-secondary-foreground">{date}</p>
             </div>

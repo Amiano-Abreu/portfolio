@@ -15,8 +15,8 @@ export default function AboutSection() {
                 title_2="Me"
             />
             <div className="space-y-4 py-8">
-                <div className="space-y-4 grid md:grid-cols-2 md:gap-4 md:space-y-0">
-                    <MeCard />
+                <div className="space-y-4 grid md:grid-cols-1 md:gap-4 md:space-y-0">
+                    {/* <MeCard /> */}
                     <ResumeCard />
                     {/* <Card
                         title="Background"
@@ -34,16 +34,16 @@ export default function AboutSection() {
                     <ExperienceCard />
                     <EducationCard />
                 </div>
-                <div className="space-y-4 grid md:grid-cols-2 md:gap-4 md:space-y-0 2xl:grid-cols-3">
+                <div className="space-y-4 grid md:grid-cols-1 md:gap-4 md:space-y-0">
                     {/* <div className="space-y-4">
                         <Card title="Instructor">Instructor</Card>
                         <Card title="Certifications">Certifications</Card>
                     </div> */}
-                    <div className="space-y-4">
+                    {/* <div className="space-y-4"> */}
                         <StackCard />
                         {/* <ExperienceCard />
                         <EducationCard /> */}
-                    </div>
+                    {/* </div> */}
                 </div>
             </div>
         </div>
