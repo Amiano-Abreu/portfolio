@@ -12,6 +12,8 @@ import SQL from "@/public/assets/images/stack/SQL.png"
 import tailwind from "@/public/assets/images/stack/tailwind.png"
 import ts from "@/public/assets/images/stack/ts.png"
 import vue from "@/public/assets/images/stack/vue.png"
+import git from "@/public/assets/images/stack/git.png"
+import github from "@/public/assets/images/stack/github.png"
 
 export const stackData = [
     {
@@ -40,6 +42,18 @@ export const stackData = [
           title: "Typescript",
           image: ts,
           bgColor: "#3179C7",
+        },
+        {
+          id: 4,
+          title: "Git version control",
+          image: git,
+          bgColor: "",
+        },
+        {
+          id: 5,
+          title: "Github",
+          image: github,
+          bgColor: "",
         },
       ],
     },
