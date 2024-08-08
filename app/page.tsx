@@ -16,6 +16,7 @@ import ScrollDown from "@/components/ui/scroll-down";
 import LandingSection from "@/sections/landing";
 import Featured from "@/sections/featured";
 import AboutSection from "@/sections/about";
+import ContactSection from "@/sections/contact";
 
 export default function Home() {
   return (
@@ -28,7 +29,8 @@ export default function Home() {
       {() => (
         <div className="pb-8">
           {/* <LandingSection /> */}
-          <AboutSection />
+          {/* <AboutSection /> */}
+          <ContactSection />
         </div>
       )}
     </WaterWaveWrapper>
