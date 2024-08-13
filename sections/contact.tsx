@@ -5,19 +5,38 @@ import Card from "@/components/ui/card";
 import Input from "@/components/ui/input";
 import SelectInput from "@/components/ui/select-input";
 import TextArea from "@/components/ui/text-area";
-import { useState } from "react";
+import { useState, useRef, FormEvent } from "react";
 import { FaPhoneVolume, FaProjectDiagram, FaUser } from "react-icons/fa";
 import { MdEmail, MdSubject } from "react-icons/md";
 import { SiMinutemailer } from "react-icons/si";
+import emailjs from "@emailjs/browser"
 
 export default function ContactSection() {
+
+    const formRef = useRef<HTMLFormElement>(null);
+    const btnRef = useRef<HTMLButtonElement>(null);
 
     const [ services, setServices ] = useState<string[]>([])
 
     const [ budget, setbudget ] = useState<string[]>([])
 
-    console.log({services})
-    console.log({budget})
+    const sendEmail = (e:FormEvent<HTMLFormElement>): void => {
+        e.preventDefault();
+        emailjs.sendForm(
+            "service_gnzuev8",
+            "template_n7hxg1h", 
+            formRef.current,
+            "e9zqm5JvJ7f06df22",
+        ).then(
+            res => {
+                console.log(res.text)
+                console.log("Email sent successfully")
+            },
+            error => {
+                console.log(error)
+            }
+        )
+    }
 
     return (
         <div className="pt-24 px-3 lg:px-8">
@@ -45,14 +64,20 @@ export default function ContactSection() {
                         />
                     </div>
 
-                    <div className="lg:col-span-2 bg-secondary-background border border-border rounded-lg space-y-6 relative overflow-hidden py-5 px-[25px] shadow-md">
+                    <form 
+                        ref={formRef}
+                        onSubmit={sendEmail}
+                        className="lg:col-span-2 bg-secondary-background border border-border rounded-lg space-y-6 relative overflow-hidden py-5 px-[25px] shadow-md"
+                    >
                         <div className="flex flex-col lg:flex-row items-center justify-between mb-4 gap-8">
                             <Input 
+                                name="name"
                                 type="text"
                                 placeholder="Full Name"
                                 icon={<FaUser />}
                             />
                             <Input 
+                                name="email"
                                 type="email"
                                 placeholder="Email Address"
                                 icon={<MdEmail />}
@@ -60,7 +85,8 @@ export default function ContactSection() {
                         </div>
                         <div className="flex items-center justify-between mb-4 gap-8">
                             <Input 
-                                type="email"
+                                name="subject"
+                                type="text"
                                 placeholder="Subject"
                                 icon={<MdSubject />}
                             />
@@ -115,15 +141,33 @@ export default function ContactSection() {
                             </div>
                         </div>
 
-                        <TextArea placeholder="Tell us about your project" icon={<FaProjectDiagram />} />
+                        <TextArea name="message" placeholder="Tell us about your project" icon={<FaProjectDiagram />} />
                         <div className="w-full flex justify-end">
-                            <Button className="!w-44 !py-3 !text-xl">
-                                Send <SiMinutemailer />
-                            </Button>
+                            <div  onClick={() => btnRef.current?.click()}>
+                                <Button className="!w-44 !py-3 !text-xl">
+                                    Send <SiMinutemailer />
+                                </Button>
+                            </div>
+                            {/* Hidden services and budget inputs for email */}
+                            <div className="hidden">
+                                    <input 
+                                        type="text" 
+                                        value={services.join(", ")}    
+                                        name="services"
+                                        hidden
+                                    />
+                                    <input 
+                                        type="text" 
+                                        value={budget.join(", ")}
+                                        name="budget"
+                                        hidden
+                                    />
+                            </div>
+                            <button type="submit" hidden ref={btnRef}>send</button>
                         </div>
 
 
-                    </div>
+                    </form>
 
 
                 </div>
