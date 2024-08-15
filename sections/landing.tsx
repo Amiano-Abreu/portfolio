@@ -46,9 +46,9 @@ function LandingSection() {
                     </div>
                 </div>
             </div>
-            <MagneticWrapper className="absolute left-1/2 -translate-x-1/2 bottom-[8rem] md:bottom-[4rem] 2xl:-bottom-10">
+            {/* <MagneticWrapper className="absolute left-1/2 -translate-x-1/2 bottom-[8rem] md:bottom-[4rem] 2xl:-bottom-10">
                 <ScrollDown />
-            </MagneticWrapper>
+            </MagneticWrapper> */}
         </div>
     </div>
   )

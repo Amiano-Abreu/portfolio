@@ -23,7 +23,7 @@ export default function ExpandableFeatured() {
                         key={i} 
                         className={cn(
                             "relative h-[640px] lg:w-1/3 mb-16 transition-all origin-center duration-300 ease-in-out",
-                            i === hoveredIndex ? "lg:w-[40%]" : "lg:w-[33.33%]"
+                            i === hoveredIndex ? "lg:w-[65%]" : "lg:w-[50%]"
                         )}
                         onMouseEnter={() => handleMouseEnter(i)}
                         onMouseLeave={() => handleMouseLeave()}

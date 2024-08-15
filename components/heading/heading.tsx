@@ -1,6 +1,6 @@
 import { FC } from "react";
 import SvgCurve from "../visualEffects/svg-curve";
-import { HeadingAnimatedSvg } from "../navigation/header/heading-animated-svg";
+import { HeadingAnimatedSvg } from "./heading-animated-svg";
 
 interface HeadingProps {
     number: string;
