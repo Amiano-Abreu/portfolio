@@ -1,14 +1,12 @@
 import { FC, ReactNode } from "react";
-import Button from "../ui/button";
 
 interface ContactCardProps {
     title: string;
     icon: ReactNode;
     text: string;
-    btnText: string;
 }
 
-const ContactCard: FC<ContactCardProps> = ({ title, icon, text, btnText }) => {
+const ContactCard: FC<ContactCardProps> = ({ title, icon, text }) => {
     return (
         <div className="bg-secondary-background border border-border rounded-lg relative overflow-hidden py-5 pl-[25px] shadow-md">
             <div className="z-20 flex flex-col gap-8 justify-between items-start">
@@ -25,8 +23,6 @@ const ContactCard: FC<ContactCardProps> = ({ title, icon, text, btnText }) => {
                         {text}
                     </h2>
                 </div>
-
-                <Button className="!w-24">{btnText}</Button>
             </div>
         </div>
     )

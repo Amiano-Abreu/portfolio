@@ -13,7 +13,7 @@ export const HeadingAnimatedSvg: FC<HeadingAnimatedSvg> = ({
   const [active, setActive] = useState<boolean>(animated || false);
   return (
     <div
-      className="link relative flex items-center justify-center w-[50px]"
+      className="link relative flex items-center justify-center w-[25px] lg:w-[50px]"
       onMouseEnter={() => setActive(true)}
       onMouseLeave={() => setActive(false)}
     >
