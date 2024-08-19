@@ -3,18 +3,23 @@ import CustomButton from '@/components/ui/custom-button'
 import LiveClock from '@/components/ui/live-clock'
 import ScrollDown from '@/components/ui/scroll-down'
 import MagneticWrapper from '@/components/visualEffects/magnetic-wrapper'
-import React from 'react'
+import React, { FC, MouseEventHandler } from 'react'
 import { FaArrowRight } from 'react-icons/fa'
 
-function LandingSection() {
+interface LandingSectionProps {
+  scrollToContact: () => void
+};
+
+const LandingSection:FC<LandingSectionProps> = ({ scrollToContact }) => {
   return (
     <div
         className="relative h-screen overflow-hidden p-8"
     >
-        <Header />
+        <Header scrollToContact={scrollToContact} />
         <div className="absolute bottom-36 left-10 z-20 md:hidden">
             <MagneticWrapper>
                 <CustomButton 
+                    scrollToContact={scrollToContact}
                     text="Let's talk"
                     icon={<FaArrowRight />}
                 />

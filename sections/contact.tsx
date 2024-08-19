@@ -5,13 +5,13 @@ import Card from "@/components/ui/card";
 import Input from "@/components/ui/input";
 import SelectInput from "@/components/ui/select-input";
 import TextArea from "@/components/ui/text-area";
-import { useState, useRef, FormEvent } from "react";
+import React, { useState, useRef, FormEvent, forwardRef, FC } from "react";
 import { FaPhoneVolume, FaProjectDiagram, FaUser } from "react-icons/fa";
 import { MdEmail, MdSubject } from "react-icons/md";
 import { SiMinutemailer } from "react-icons/si";
 import emailjs from "@emailjs/browser"
 
-export default function ContactSection() {
+const ContactSection:FC = forwardRef((props, ref) => {
 
     const formRef = useRef<HTMLFormElement>(null);
     const btnRef = useRef<HTMLButtonElement>(null);
@@ -39,7 +39,7 @@ export default function ContactSection() {
     }
 
     return (
-        <div className="pt-24 px-3 lg:px-8">
+        <div ref={ref as React.Ref<HTMLDivElement>} className="pt-24 px-3 lg:px-8">
             <Heading 
                 number="03"
                 title_1="Contact"
@@ -172,7 +172,9 @@ export default function ContactSection() {
             </Card>
         </div>
     )
-}
+})
+
+export default ContactSection
 
 const servicesOptions = [
     {

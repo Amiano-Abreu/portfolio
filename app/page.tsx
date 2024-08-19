@@ -6,8 +6,17 @@ import LandingSection from "@/sections/landing";
 import Featured from "@/sections/featured";
 import AboutSection from "@/sections/about";
 import ContactSection from "@/sections/contact";
+import { useRef } from "react";
 
 export default function Home() {
+  const contactRef = useRef<HTMLDivElement>(null);
+
+  const scrollToContact = () => {
+    if (contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <WaterWaveWrapper
       imageUrl=""
@@ -17,10 +26,10 @@ export default function Home() {
     >
       {() => (
         <div className="pb-8">
-          <LandingSection />
+          <LandingSection scrollToContact={scrollToContact} />
           <Featured />
           <AboutSection />
-          <ContactSection />
+          <ContactSection ref={contactRef} />
         </div>
       )}
     </WaterWaveWrapper>
