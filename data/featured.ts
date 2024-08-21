@@ -1,5 +1,6 @@
 import netflix from "@/public/assets/video/netflix.mp4"
 import hyperBikes from "@/public/assets/video/hyperBikes.mp4"
+import hyperBikesApi from "@/public/assets/video/hyperBikesApi.mp4"
 
 const featuredData = [
     {
@@ -7,21 +8,21 @@ const featuredData = [
       logo: "",
       tag: "Dec 2023",
       video: hyperBikes,
+      link: "https://hyper-bikes.onrender.com/",
     },
     {
       title: "Netflix Clone",
       logo: "",
       tag: "May 2024",
+      link: "https://ntflix-clone-git-main-amianos-projects.vercel.app/",
       video: netflix,
     },
     {
-      title: "Frontline Creative Studio Website",
+      title: "Hyper Bikes Api",
       logo: "",
-      tag: "Sep 2023",
-      video:
-        "https://cdn.dribbble.com/userupload/12997464/file/original-a24f5765b5ac067c91523d94848da540.mp4",
-      credits: "Mariusz Mitkow",
-      link: "https://dribbble.com/shots/23623908-Frontline-Creative-Studio-Website",
+      tag: "Dec 2023",
+      link: "https://hyper-bikes.onrender.com/api",
+      video: hyperBikesApi,
     },
   ];
   

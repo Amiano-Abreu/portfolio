@@ -1,9 +1,13 @@
 import { featuredData } from "@/data";
 import FeaturedCard from "../cards/featured/featured-cards";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { FC, MouseEventHandler, useState } from "react";
 
-export default function ExpandableFeatured() {
+interface expandableProps {
+  setOpenHandler: (link: string) => void
+}
+
+const ExpandableFeatured:FC<expandableProps> = ({setOpenHandler}) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   const handleMouseEnter = (index: number) => {
@@ -29,7 +33,9 @@ export default function ExpandableFeatured() {
                         onMouseLeave={() => handleMouseLeave()}
                     >
                         <FeaturedCard
+                            setOpenHandler={setOpenHandler}
                             active={i === hoveredIndex}
+                            link={featured.link}
                             title={featured.title}
                             tag={featured.tag}
                             video={featured.video}
@@ -41,3 +47,5 @@ export default function ExpandableFeatured() {
     </div>
   )
 }
+
+export default ExpandableFeatured
