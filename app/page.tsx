@@ -1,12 +1,16 @@
 "use client"
 
-import WaterWaveWrapper from "@/components/visualEffects/water-wave-wrapper";
-
 import LandingSection from "@/sections/landing";
 import Featured from "@/sections/featured";
 import AboutSection from "@/sections/about";
 import ContactSection from "@/sections/contact";
 import { useRef } from "react";
+import dynamic from "next/dynamic";
+
+const WaterWaveWrapper = dynamic(
+  () => import("@/components/visualEffects/water-wave-wrapper"),
+  { ssr: false }
+);
 
 export default function Home() {
   const contactRef = useRef<HTMLDivElement>(null);
