@@ -22,7 +22,7 @@ const Button: FC<ButtonProps> = ({
                 <Link 
                     href={link}
                     target="_blank"
-                    className="w-10 h-10 cursor -pointer"
+                    className="w-auto h-full cursor-pointer"
                 >
                     <ButtonBody
                         className={className}
