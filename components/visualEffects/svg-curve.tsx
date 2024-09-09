@@ -60,6 +60,16 @@ export default function SvgCurve() {
     }
   };
 
+  const setPath = (value: number) => {
+    const width = window.innerWidth * 0.7;
+
+    path.current?.setAttributeNS(
+      null,
+      "d",
+      `M 0 50 Q ${width * x} ${50 + value} ${width} 50`
+    );
+  };
+
   useEffect(() => {
     setPath(progress);
 
@@ -73,17 +83,7 @@ export default function SvgCurve() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [progress]);
-
-  const setPath = (value: number) => {
-    const width = window.innerWidth * 0.7;
-
-    path.current?.setAttributeNS(
-      null,
-      "d",
-      `M 0 50 Q ${width * x} ${50 + value} ${width} 50`
-    );
-  };
+  }, [progress, setPath]);
   /*
 
 */
