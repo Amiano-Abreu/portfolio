@@ -26,7 +26,7 @@ export default function StackCard() {
                                 {tech.stack.map((t, i) => {
                                     return (
                                         <Tooltip
-                                            key={t.id}
+                                            key={t.id + t.title}
                                             title={t.title}
                                             image={t.image}
                                             bgColor={t.bgColor}
