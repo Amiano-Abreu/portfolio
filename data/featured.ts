@@ -15,13 +15,13 @@ const featuredData = [
       logo: "",
       tag: "Dec 2023",
       video: hyperBikes,
-      link: "https://hyper-bikes.onrender.com/",
+      link: "https://hyper-bikes-backend-git-main-amianos-projects.vercel.app/",
     },
     {
       title: "Hyper Bikes Api",
       logo: "",
       tag: "Dec 2023",
-      link: "https://hyper-bikes.onrender.com/api",
+      link: "https://hyper-bikes-backend-git-main-amianos-projects.vercel.app/api",
       video: hyperBikesApi,
     },
   ];
