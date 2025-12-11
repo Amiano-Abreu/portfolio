@@ -1,42 +1,52 @@
 import ContactCard from "@/components/cards/contact";
 import Heading from "@/components/heading/heading";
-import Button from "@/components/ui/button";
+// import Button from "@/components/ui/button";
 import Card from "@/components/ui/card";
-import Input from "@/components/ui/input";
-import SelectInput from "@/components/ui/select-input";
-import TextArea from "@/components/ui/text-area";
-import React, { useState, useRef, FormEvent, forwardRef, FC } from "react";
-import { FaPhoneVolume, FaProjectDiagram, FaUser } from "react-icons/fa";
-import { MdEmail, MdSubject } from "react-icons/md";
-import { SiMinutemailer } from "react-icons/si";
-import emailjs from "@emailjs/browser"
+// import Input from "@/components/ui/input";
+// import SelectInput from "@/components/ui/select-input";
+// import TextArea from "@/components/ui/text-area";
+import 
+    React, {
+                // useState, useRef, FormEvent, 
+                forwardRef, FC 
+            } from "react";
+import { 
+    FaPhoneVolume, 
+    // FaProjectDiagram, FaUser 
+} from "react-icons/fa";
+import { 
+    MdEmail, 
+    // MdSubject 
+} from "react-icons/md";
+// import { SiMinutemailer } from "react-icons/si";
+// import emailjs from "@emailjs/browser"
 
 const ContactSection:FC = forwardRef((props, ref) => {
 
-    const formRef = useRef<HTMLFormElement>(null);
-    const btnRef = useRef<HTMLButtonElement>(null);
+    // const formRef = useRef<HTMLFormElement>(null);
+    // const btnRef = useRef<HTMLButtonElement>(null);
 
-    const [ services, setServices ] = useState<string[]>([])
+    // const [ services, setServices ] = useState<string[]>([])
 
-    const [ budget, setbudget ] = useState<string[]>([])
+    // const [ budget, setbudget ] = useState<string[]>([])
 
-    const sendEmail = (e:FormEvent<HTMLFormElement>): void => {
-        e.preventDefault();
-        emailjs.sendForm(
-            "service_gnzuev8",
-            "template_n7hxg1h", 
-            formRef.current,
-            "e9zqm5JvJ7f06df22",
-        ).then(
-            res => {
-                console.log(res.text)
-                console.log("Email sent successfully")
-            },
-            error => {
-                console.log(error)
-            }
-        )
-    }
+    // const sendEmail = (e:FormEvent<HTMLFormElement>): void => {
+    //     e.preventDefault();
+    //     emailjs.sendForm(
+    //         "service_gnzuev8",
+    //         "template_n7hxg1h", 
+    //         formRef.current,
+    //         "e9zqm5JvJ7f06df22",
+    //     ).then(
+    //         res => {
+    //             console.log(res.text)
+    //             console.log("Email sent successfully")
+    //         },
+    //         error => {
+    //             console.log(error)
+    //         }
+    //     )
+    // }
 
     return (
         <div ref={ref as React.Ref<HTMLDivElement>} className="pt-24 px-3 lg:px-8">
@@ -47,22 +57,22 @@ const ContactSection:FC = forwardRef((props, ref) => {
             />
 
             <Card>
-                <div className="grid gap-8 grid-cols-1 lg:grid-cols-3">
+                <div className="grid gap-8 grid-cols-1">
                     
                     <div className="flex flex-col gap-8">
                         <ContactCard 
-                            title="Call us directly at"
+                            title="Call me directly at"
                             icon={<FaPhoneVolume className="fill-[#333] text-lg" />}
                             text="+44 7901148991"
                         />
                         <ContactCard 
-                            title="Chat with us"
+                            title="Chat with me"
                             icon={<MdEmail className="fill-[#333] text-lg" />}
                             text="amianoabreu@gmail.com"
                         />
                     </div>
 
-                    <form 
+                    {/* <form 
                         ref={formRef}
                         onSubmit={sendEmail}
                         className="lg:col-span-2 bg-secondary-background border border-border rounded-lg space-y-6 relative overflow-hidden py-5 px-[25px] shadow-md"
@@ -145,9 +155,9 @@ const ContactSection:FC = forwardRef((props, ref) => {
                                 <Button className="!w-44 !py-3 !text-xl">
                                     Send <SiMinutemailer />
                                 </Button>
-                            </div>
+                            </div> */}
                             {/* Hidden services and budget inputs for email */}
-                            <div className="hidden">
+                            {/* <div className="hidden">
                                     <input 
                                         type="text" 
                                         value={services.join(", ")}    
@@ -165,7 +175,7 @@ const ContactSection:FC = forwardRef((props, ref) => {
                         </div>
 
 
-                    </form>
+                    </form> */}
 
 
                 </div>
@@ -176,40 +186,40 @@ const ContactSection:FC = forwardRef((props, ref) => {
 
 export default ContactSection
 
-const servicesOptions = [
-    {
-        id: "Web Development",
-        text: "Web Development"
-    },
-    {
-        id: "Frontend Development",
-        text: "Frontend Development"
-    },
-    {
-        id: "Backend Development",
-        text: "Backend Development"
-    },
-    {
-        id: "Full Stack Development",
-        text: "Full Stack Development"
-    },
-]
+// const servicesOptions = [
+//     {
+//         id: "Web Development",
+//         text: "Web Development"
+//     },
+//     {
+//         id: "Frontend Development",
+//         text: "Frontend Development"
+//     },
+//     {
+//         id: "Backend Development",
+//         text: "Backend Development"
+//     },
+//     {
+//         id: "Full Stack Development",
+//         text: "Full Stack Development"
+//     },
+// ]
 
-const budgetOptions = [
-    {
-        id: "less than £500",
-        text: "< £500"
-    },
-    {
-        id: "between £500 and £2000",
-        text: "£500 - £2000"
-    },
-    {
-        id: "between £2000 and £5000",
-        text: "£2000 - £5000"
-    },
-    {
-        id: "more than £5000",
-        text: "> £5000"
-    },
-]
+// const budgetOptions = [
+//     {
+//         id: "less than £500",
+//         text: "< £500"
+//     },
+//     {
+//         id: "between £500 and £2000",
+//         text: "£500 - £2000"
+//     },
+//     {
+//         id: "between £2000 and £5000",
+//         text: "£2000 - £5000"
+//     },
+//     {
+//         id: "more than £5000",
+//         text: "> £5000"
+//     },
+// ]

@@ -26,7 +26,12 @@ export default ExperienceCard
 
 const experienceData = [
   {
-    date: "7 Months (2023)",
+    date: "2024 - Present",
+    title: "Frontend Developer",
+    subTitle: "Illuminext",
+  },
+  {
+    date: "2023",
     title: "Software Engineer",
     subTitle: "Freethink",
   },

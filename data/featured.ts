@@ -1,29 +1,29 @@
-import netflix from "@/public/assets/video/netflix.mp4"
+import flixvid from "@/public/assets/video/flixvid.mp4"
 import hyperBikes from "@/public/assets/video/hyperBikes.mp4"
-import hyperBikesApi from "@/public/assets/video/hyperBikesApi.mp4"
+import gsap from "@/public/assets/video/gsap.mp4"
 
 const featuredData = [  
+  {
+    title: "GSAP animated project",
+    logo: "",
+    tag: "Nov 2025",
+    link: "https://gsap-landing-git-main-amianos-projects.vercel.app/",
+    video: gsap,
+  },
   {
     title: "Netflix Clone",
     logo: "",
     tag: "May 2024",
-    link: "https://ntflix-clone-git-main-amianos-projects.vercel.app/",
-    video: netflix,
+    link: "https://flixvid-git-main-amianos-projects.vercel.app/",
+    video: flixvid,
   },
   {
-      title: "Hyper Bikes",
-      logo: "",
-      tag: "Dec 2023",
-      video: hyperBikes,
-      link: "https://hyper-bikes-backend-git-main-amianos-projects.vercel.app/",
-    },
-    {
-      title: "Hyper Bikes Api",
-      logo: "",
-      tag: "Dec 2023",
-      link: "https://hyper-bikes-backend-git-main-amianos-projects.vercel.app/api",
-      video: hyperBikesApi,
-    },
-  ];
+    title: "Hyper Bikes",
+    logo: "",
+    tag: "Dec 2023",
+    video: hyperBikes,
+    link: "https://hyper-bikes-backend-git-main-amianos-projects.vercel.app/",
+  }
+];
   
-  export default featuredData;
+export default featuredData;
